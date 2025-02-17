@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<div class="container mt-5 mb-5  max-w-lg mx-auto p-5 bg-white/80 backdrop-blur-md rounded-3xl border border-gray-300 shadow-lg">
+    
+    <h2 class="text-4xl font-extrabold text-center text-gray-900 drop-shadow-lg">🚀 WhatsApp Automation</h2>
+    <p class="text-center text-gray-500 text-sm mt-3">Send messages instantly with a smooth experience</p>
+
+    <form action="" method="post">
+        {% csrf_token %} 
+
+        {{ form.as_p }}
+        {% comment %} <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Mobile no:</label>
+          <input type="number" class="form-control"  placeholder="Enter mobile number" >
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label for="comment">Message:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        </div> {% endcomment %}
+        
+        <button type="submit" class="btn btn-primary ">Send Message</button>
+    </form>
+
+</div>
+
+{% endblock body %}
